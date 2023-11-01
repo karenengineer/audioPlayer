@@ -5,20 +5,27 @@ import { SoundRecording } from "src/app/models/soundrecording.model";
   providedIn: 'root'
 })
 export class SoundRecordingService {
+  private nextId = 985;
 
   constructor() { }
 
   getSoundRecordings(): SoundRecording[] {
-    return [{
-      id: 1,
-      name: 'Rock',
-      fileName: 'https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/menu.ogg'
-    },
+    return [
       {
-      id: 2,
-      name: 'Classic Rock',
-      fileName: 'https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/win.ogg'
-    }
+        id: this.nextId++,
+        name: 'Random Rock Music',
+        fileName: 'https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/menu.ogg'
+      },
+      {
+        id: this.nextId++,
+        name: 'Classic Rock',
+        fileName: 'https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/win.ogg'
+      },
+      {
+        id: this.nextId++,
+        name: 'Another Rock Ballad',
+        fileName: 'https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/race1.ogg'
+      }
     ];
   }
 

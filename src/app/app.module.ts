@@ -7,6 +7,8 @@ import { PlayerComponent } from './components/player/player.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from "@angular/material/table";
 import { AppRoutingModule } from "src/app/app.routing.module";
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AppRoutingModule } from "src/app/app.routing.module";
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

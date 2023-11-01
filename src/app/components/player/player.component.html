@@ -1,1 +1,10 @@
-<p>player works!</p>
+<div *ngIf="soundRecording" class="mt-20">
+  <div class="player-controls">
+    <button mat-icon-button (click)="playPause()">
+      <mat-icon>{{ isPlaying ? 'pause' : 'play_arrow' }}</mat-icon>
+    </button>
+  </div>
+  <div class="player-info">
+    <p>{{ soundRecording.name }}</p>
+  </div>
+</div>
